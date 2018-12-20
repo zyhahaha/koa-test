@@ -1,5 +1,5 @@
 const router = require('koa-router')();
-const controller = require('../controller/account/c-signin')
+const controller = require('../../controller/account/c-signin')
 
 router.get('/signin', controller.getSignin)
 router.post('/signin', controller.postSignin)

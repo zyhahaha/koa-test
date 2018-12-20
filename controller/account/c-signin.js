@@ -1,7 +1,7 @@
-const userModel = require('../lib/mysql.js')
+const userModel = require('../../lib/mysql.js')
 const md5 = require('md5')
-const checkNotLogin = require('../middlewares/check.js').checkNotLogin
-const checkLogin = require('../middlewares/check.js').checkLogin
+const checkNotLogin = require('../../middlewares/check.js').checkNotLogin
+const checkLogin = require('../../middlewares/check.js').checkLogin
 
 exports.getSignin = async ctx => {
     await checkNotLogin(ctx)
