@@ -1,4 +1,4 @@
-const userModel = require('../../lib/mysql.js')
+const userModel = require('../../model/account/account.js')
 const md5 = require('md5')
 const checkNotLogin = require('../../middlewares/check.js').checkNotLogin
 const checkLogin = require('../../middlewares/check.js').checkLogin
