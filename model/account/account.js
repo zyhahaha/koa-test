@@ -1,4 +1,4 @@
-const query = require('../../lib/mysql');
+const query = require('../../lib/db');
 // 注册用户
 exports.insertData = ( value ) => {
   let _sql = "insert into users set name=?,pass=?,avator=?,moment=?;"
