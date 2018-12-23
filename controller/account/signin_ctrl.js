@@ -4,10 +4,14 @@ const checkNotLogin = require('../../middlewares/check.js').checkNotLogin
 const checkLogin = require('../../middlewares/check.js').checkLogin
 
 exports.getSignin = async ctx => {
-    await checkNotLogin(ctx)
-    await ctx.render('signin', {
-        session: ctx.session,
-    })
+    ctx.body = {
+        code: 200,
+        message: 'hello'
+    }
+    // await checkNotLogin(ctx)
+    // await ctx.render('signin', {
+    //     session: ctx.session,
+    // })
 }
 exports.postSignin = async ctx => {
     console.log(ctx.request.body)
