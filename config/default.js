@@ -3,7 +3,7 @@ const config = {
   port: 3000,
   // 数据库配置
   database: {
-    DATABASE: 'koa_test',
+    DATABASE: 'test',
     USERNAME: 'root',
     PASSWORD: '854275944618',
     PORT: '3306',
