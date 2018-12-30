@@ -54,7 +54,10 @@ app.use(require('./routers/account/signin.js').routes())
 app.use(require('./routers/account/signup.js').routes())
 // app.use(require('./routers/account/posts.js').routes())
 app.use(require('./routers/account/signout.js').routes())
-
+// test
+app.use(require('./routers/react_app/react_app.js').routes())
+app.use(require('./routers/vue_ts_app/vue_ts_app.js').routes())
+app.use(require('./routers/test_cloud/test_cloud.js').routes())
 
 app.listen(config.port)
 
