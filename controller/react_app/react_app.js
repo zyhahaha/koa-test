@@ -1,18 +1,28 @@
-let courseImg1 = ('../../imgs/course1.png');
-let courseImg2 = ('../../imgs/course2.png');
-let courseImg3 = ('../../imgs/course3.png');
-let bannerImg = ('../../imgs/home_banner.png');
+let fs = require('fs');
+
+let courseImg1 = handleBase64('./imgs/course1.png');
+let courseImg2 = handleBase64('./imgs/course2.png');
+let courseImg3 = handleBase64('./imgs/course3.png');
+let bannerImg = handleBase64('./imgs/home_banner.png');
 
 // people
-let people1 = ('../../imgs/people/people1.png');
-let people2 = ('../../imgs/people/people2.png');
-let people3 = ('../../imgs/people/people3.png');
-let people4 = ('../../imgs/people/people4.png');
-let people5 = ('../../imgs/people/people5.png');
-let people6 = ('../../imgs/people/people6.png');
+let people1 = handleBase64('./imgs/people/people1.png');
+let people2 = handleBase64('./imgs/people/people2.png');
+let people3 = handleBase64('./imgs/people/people3.png');
+let people4 = handleBase64('./imgs/people/people4.png');
+let people5 = handleBase64('./imgs/people/people5.png');
+let people6 = handleBase64('./imgs/people/people6.png');
 
 // avatar
-let cardImg = ('../../imgs/avatar/card.png');
+let cardImg = handleBase64('./imgs/avatar/card.png');
+
+// base64
+function handleBase64(fileUrl) {
+  let imageData = fs.readFileSync(__dirname + '/' + (fileUrl)); // 例：fileUrl="D:\\test\\test.bmp"
+  let imageBase64 = imageData.toString("base64");
+  let imagePrefix = "data:image/bmp;base64,";
+  return imagePrefix + imageBase64;
+}
 
 exports.getHomeContentData = async ctx => {
   let homeContentData = {
@@ -60,11 +70,11 @@ exports.getHomeContentData = async ctx => {
       }
     ]
   };
-  ctx.set('Access-Control-Allow-Origin','*');
+  ctx.set('Access-Control-Allow-Origin', '*');
   ctx.body = {
-      code: 200,
-      data: homeContentData,
-      message: 'hello'
+    code: 200,
+    data: homeContentData,
+    message: 'hello'
   }
 }
 
@@ -109,11 +119,11 @@ exports.getPeopleData = async ctx => {
       }
     ]
   };
-  ctx.set('Access-Control-Allow-Origin','*');
+  ctx.set('Access-Control-Allow-Origin', '*');
   ctx.body = {
-      code: 200,
-      data: peopleData,
-      message: 'hello'
+    code: 200,
+    data: peopleData,
+    message: 'hello'
   }
 }
 
@@ -139,10 +149,10 @@ exports.getAvatarData = async ctx => {
       }
     ]
   };
-  ctx.set('Access-Control-Allow-Origin','*');
+  ctx.set('Access-Control-Allow-Origin', '*');
   ctx.body = {
-      code: 200,
-      data: avatarData,
-      message: 'hello'
+    code: 200,
+    data: avatarData,
+    message: 'hello'
   }
 }
