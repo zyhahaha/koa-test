@@ -8,6 +8,7 @@ exports.getStoreDetailData = async ctx => {
       intro: '商户信息tes tetst'
     }
   };
+  ctx.set('Access-Control-Allow-Origin','*');
   ctx.body = {
       code: 200,
       data: storeDetailData,
@@ -26,6 +27,7 @@ exports.getPersonData = async ctx => {
       collectNum: '2'
     }
   };
+  ctx.set('Access-Control-Allow-Origin','*');
   ctx.body = {
       code: 200,
       data: personData,
@@ -42,6 +44,7 @@ exports.getPersonInfo = async ctx => {
       phone: '未绑定',
     }
   };
+  ctx.set('Access-Control-Allow-Origin','*');
   ctx.body = {
       code: 200,
       data: personInfo,

@@ -27,6 +27,7 @@ exports.getHomeNavData = async ctx => {
       }
     ]
   }
+  ctx.set('Access-Control-Allow-Origin','*');
   ctx.body = {
       code: 200,
       data: homeNavData,
@@ -45,6 +46,7 @@ exports.getHomeActivityDate = async ctx => {
       }
     ]
   };
+  ctx.set('Access-Control-Allow-Origin','*');
   ctx.body = {
       code: 200,
       data: homeActivityDate,
@@ -62,7 +64,8 @@ exports.getMyInfoData = async ctx => {
       watchNum: 123,
       fansNum: 566,
     }
-  }
+  };
+  ctx.set('Access-Control-Allow-Origin','*');
   ctx.body = {
       code: 200,
       data: myInfoData,

@@ -60,6 +60,7 @@ exports.getHomeContentData = async ctx => {
       }
     ]
   };
+  ctx.set('Access-Control-Allow-Origin','*');
   ctx.body = {
       code: 200,
       data: homeContentData,
@@ -108,6 +109,7 @@ exports.getPeopleData = async ctx => {
       }
     ]
   };
+  ctx.set('Access-Control-Allow-Origin','*');
   ctx.body = {
       code: 200,
       data: peopleData,
@@ -137,6 +139,7 @@ exports.getAvatarData = async ctx => {
       }
     ]
   };
+  ctx.set('Access-Control-Allow-Origin','*');
   ctx.body = {
       code: 200,
       data: avatarData,
