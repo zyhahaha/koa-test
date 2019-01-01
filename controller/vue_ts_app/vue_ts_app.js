@@ -84,7 +84,7 @@ exports.getMyInfoData = async ctx => {
       nickname: '瞌睡',
       city: '江苏',
       gender: '男',
-      summary: '简介：素食主义者',
+      summary: '素食主义者',
       watchNum: 123,
       fansNum: 566,
     }
