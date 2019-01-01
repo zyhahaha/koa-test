@@ -43,6 +43,30 @@ exports.getHomeActivityDate = async ctx => {
         summary: '上海浦东区mall广场',
         statDate: '10.16-10.26',
         statCost: '免费'
+      },
+      {
+        title: 'WOOY艺术展',
+        summary: '上海浦东区mall广场',
+        statDate: '10.16-10.26',
+        statCost: '免费'
+      },
+      {
+        title: 'WOOY艺术展',
+        summary: '上海浦东区mall广场',
+        statDate: '10.16-10.26',
+        statCost: '免费'
+      },
+      {
+        title: 'WOOY艺术展',
+        summary: '上海浦东区mall广场',
+        statDate: '10.16-10.26',
+        statCost: '免费'
+      },
+      {
+        title: 'WOOY艺术展',
+        summary: '上海浦东区mall广场',
+        statDate: '10.16-10.26',
+        statCost: '免费'
       }
     ]
   };
