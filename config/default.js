@@ -4,11 +4,11 @@ const config = {
   port: 8088,
   // 数据库配置
   database: {
-    DATABASE: LOCAL_CONFIG.database,
-    USERNAME: LOCAL_CONFIG.username,
+    DATABASE: 'test',
+    USERNAME: 'root',
     PASSWORD: LOCAL_CONFIG.password,
-    PORT: LOCAL_CONFIG.port,
-    HOST: LOCAL_CONFIG.host
+    PORT: '3306',
+    HOST: '47.96.234.53'
   }
 };
 
