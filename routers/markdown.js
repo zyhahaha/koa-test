@@ -1,38 +1,27 @@
 const router = require('koa-router')();
+const MarkdownIt = require('markdown-it');
 
-const readline = require('readline');
-const fs = require("fs");  
+// const readline = require('readline');
+const fs = require('fs');
 async function markdownCtrl(ctx) {
-  const result = await readFile('./index.md');
+  let result = await readFile('./index.md');
+  var md = new MarkdownIt();
+  result = md.render(result);
   ctx.set('Access-Control-Allow-Origin', '*');
-  ctx.json = {
-    result
-  };
+  ctx.body = result;
 }
-function readFile(filePath) {
-  let input = fs.createReadStream(filePath);
-  const rl = readline.createInterface({
-    input
-  });
-  let result = [];
-  let lineData;
 
+function readFile(filePath) {
+  let result = '';
 
   return new Promise((resolve, reject) => {
-    rl.on('line', line => {
-      lineData = line.split(/\s+/);
-      result.push(lineData);
-    });
-
-    rl.on('close', line => {
-      console.log(result);
-      console.log('读取完毕！');
-
+    fs.readFile(filePath, 'utf-8', (err, data) => {
+      result = data;
       resolve(result);
     });
-
-    rl.on('error', reject);
   });
 }
 
-module.exports = router
+router.get('/markdown', markdownCtrl);
+
+module.exports = router;
