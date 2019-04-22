@@ -5,7 +5,7 @@ const MarkdownIt = require('markdown-it');
 const fs = require('fs');
 async function markdownCtrl(ctx) {
   let result = await readFile('./index.md');
-  var md = new MarkdownIt();
+  let md = new MarkdownIt();
   result = md.render(result);
   ctx.set('Access-Control-Allow-Origin', '*');
   ctx.body = result;
