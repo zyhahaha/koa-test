@@ -1,5 +1,5 @@
 {
-  "name": "koa2-blog",
+  "name": "koa2-test",
   "version": "1.0.0",
   "description": "koa nodejs",
   "main": "index.js",
@@ -10,10 +10,9 @@
     "dev": "supervisor --harmony index",
     "test": "./node_modules/mocha/bin/mocha --harmony test"
   },
-  "author": "test",
+  "author": "zhaoyang",
   "license": "MIT",
   "dependencies": {
-    "ejs": "^2.5.6",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-compress": "^2.0.0",
