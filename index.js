@@ -1,13 +1,10 @@
 const Koa = require('koa');
 const path = require('path')
 const bodyParser = require('koa-bodyparser');
-// const ejs = require('ejs');
 const session = require('koa-session-minimal');
 const MysqlStore = require('koa-mysql-session');
 const config = require('./config/default.js');
 const compress = require('koa-compress'); // gzip压缩
-// const router = require('koa-router')
-// const views = require('koa-views')
 // const koaStatic = require('koa-static')
 const staticCache = require('koa-static-cache')
 const app = new Koa()
@@ -40,10 +37,6 @@ app.use(staticCache(path.join(__dirname, './images'), { dynamic: true }, {
   maxAge: 365 * 24 * 60 * 60
 }))
 
-// 配置服务端模板渲染引擎中间件
-// app.use(views(path.join(__dirname, './views'), {
-//   extension: 'ejs'
-// }))
 app.use(bodyParser({
   formLimit: '1mb'
 }))
@@ -52,7 +45,6 @@ app.use(compress({threshold: 2048}))
 //  路由
 app.use(require('./routers/account/signin.js').routes())
 app.use(require('./routers/account/signup.js').routes())
-// app.use(require('./routers/account/posts.js').routes())
 app.use(require('./routers/account/signout.js').routes())
 // test
 app.use(require('./routers/react_app/react_app.js').routes())
