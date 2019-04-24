@@ -11,5 +11,6 @@ async function hookCtrl(ctx) {
 
 
 router.get('/githook', hookCtrl);
+router.post('/githook', hookCtrl);
 
 module.exports = router;
