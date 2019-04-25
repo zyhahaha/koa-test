@@ -1,4 +1,3 @@
-const LOCAL_CONFIG = require('./local.js');
 const config = {
   // 启动端口
   port: 8088,
@@ -6,9 +5,9 @@ const config = {
   database: {
     DATABASE: 'test',
     USERNAME: 'root',
-    PASSWORD: LOCAL_CONFIG.password,
+    PASSWORD: 'zy@123456',
     PORT: '3306',
-    HOST: '47.96.234.53'
+    HOST: 'rm-uf6t5b7yq6l642y707o.mysql.rds.aliyuncs.com'
   }
 };
 
